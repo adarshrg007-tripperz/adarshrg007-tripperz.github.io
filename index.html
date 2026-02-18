@@ -3,108 +3,158 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Decodedge – Trading Discipline & Analytics Platform</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Decodedge – Trading Discipline & Performance Analytics</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-body {
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Inter', sans-serif;
-  background: #0f172a;
+  background: #0b1120;
   color: white;
+  line-height: 1.6;
 }
 
 section {
-  padding: 80px 20px;
-  text-align: center;
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .hero {
-  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  text-align: center;
+  padding: 140px 20px;
+  background: radial-gradient(circle at top, #1e3a8a 0%, #0b1120 60%);
 }
 
-h1 {
-  font-size: 48px;
+.hero h1 {
+  font-size: 56px;
+  font-weight: 800;
   margin-bottom: 20px;
 }
 
-h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-p {
+.hero p {
+  font-size: 20px;
+  opacity: 0.8;
   max-width: 700px;
   margin: auto;
-  opacity: 0.8;
 }
 
-.btn {
-  display: inline-block;
-  margin: 20px 10px;
-  padding: 14px 28px;
-  background: white;
-  color: #1e3a8a;
-  font-weight: 600;
-  border-radius: 8px;
-  text-decoration: none;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+.buttons {
   margin-top: 40px;
 }
 
-.card {
-  background: #1e293b;
-  padding: 30px;
-  border-radius: 12px;
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  padding: 16px 32px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 10px;
+  display: inline-block;
 }
 
-.pricing {
+.btn-secondary {
+  border: 1px solid #2563eb;
+  padding: 16px 32px;
+  border-radius: 10px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 10px;
+  display: inline-block;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.section-sub {
+  text-align: center;
+  opacity: 0.7;
+  max-width: 700px;
+  margin: auto;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
-.price-card {
-  background: #1e293b;
+.card {
+  background: rgba(255,255,255,0.05);
   padding: 40px;
-  border-radius: 12px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #2563eb;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+}
+
+.pricing-card {
+  text-align: center;
 }
 
 .price {
-  font-size: 32px;
+  font-size: 36px;
   margin: 20px 0;
+  font-weight: 700;
+}
+
+.highlight {
+  border: 2px solid #2563eb;
+}
+
+form {
+  text-align: center;
+  margin-top: 40px;
 }
 
 input {
-  padding: 14px;
-  width: 280px;
-  border-radius: 6px;
+  padding: 16px;
+  width: 300px;
+  border-radius: 8px;
   border: none;
-  margin-top: 20px;
+  margin-right: 10px;
 }
 
 button {
-  padding: 14px 28px;
+  padding: 16px 28px;
+  border-radius: 8px;
+  border: none;
   background: #2563eb;
   color: white;
-  border: none;
-  border-radius: 6px;
-  margin-top: 20px;
+  font-weight: 600;
   cursor: pointer;
 }
 
 footer {
-  padding: 40px;
-  background: #0f172a;
-  opacity: 0.7;
+  text-align: center;
+  padding: 60px 20px;
+  opacity: 0.6;
 }
+
 </style>
 </head>
 
@@ -112,76 +162,82 @@ footer {
 
 <section class="hero">
   <h1>Track. Analyze. Improve.</h1>
-  <p>Decodedge is a professional trading discipline & analytics platform built for traders who want consistency — not chaos.</p>
-  <a href="#signup" class="btn">Get Free Journal</a>
-  <a href="#pricing" class="btn">View Pricing</a>
+  <p>Decodedge is the performance operating system for traders who value discipline, structured analytics, and long-term consistency.</p>
+
+  <div class="buttons">
+    <a href="#signup" class="btn-primary">Get Free Journal</a>
+    <a href="#pricing" class="btn-secondary">View Pricing</a>
+  </div>
 </section>
 
 <section>
-  <h2>Most Traders Track P&L. Few Track Behavior.</h2>
-  <p>Strategies fail without discipline. Consistency fails without data. Decodedge gives you clarity through structured trade tracking, performance analytics, and behavioral insights.</p>
-</section>
+  <h2 class="section-title">Built for Serious Traders</h2>
+  <p class="section-sub">Most traders focus on strategy. Professionals focus on process. Decodedge helps you measure behavior, track performance, and refine execution.</p>
 
-<section>
-  <h2>Features</h2>
-  <div class="features">
+  <div class="grid">
     <div class="card">
-      <h3>Log Every Trade</h3>
-      <p>Capture entry, exit, size, reasoning, screenshots, and notes.</p>
+      <h3>Trade Logging</h3>
+      <p>Document entries, exits, reasoning, risk parameters, and screenshots with structured precision.</p>
     </div>
+
     <div class="card">
-      <h3>Advanced Analytics</h3>
-      <p>Track win rate, expectancy, R:R, drawdown, and consistency score.</p>
+      <h3>Performance Metrics</h3>
+      <p>Monitor win rate, expectancy, R:R ratios, drawdown cycles, and behavioral consistency.</p>
     </div>
+
     <div class="card">
-      <h3>Discipline Tracking</h3>
-      <p>Identify emotional trades and pattern-based mistakes.</p>
+      <h3>Behavioral Analytics</h3>
+      <p>Identify emotional trades, rule violations, and pattern-based execution flaws.</p>
     </div>
+
     <div class="card">
       <h3>Structured Reports</h3>
-      <p>Generate clean performance reviews weekly or monthly.</p>
+      <p>Generate professional weekly and monthly performance reviews.</p>
     </div>
   </div>
 </section>
 
 <section id="pricing">
-  <h2>Pricing</h2>
-  <div class="pricing">
-    <div class="price-card">
+  <h2 class="section-title">Pricing</h2>
+
+  <div class="grid">
+
+    <div class="card pricing-card">
       <h3>Free Journal</h3>
       <div class="price">₹0 / month</div>
-      <p>Basic trade log template<br>Manual analytics<br>Email support</p>
-      <a href="#signup" class="btn">Get Free</a>
+      <p>Basic trade log template<br>Manual tracking<br>Email support</p>
+      <a href="#signup" class="btn-primary">Get Free</a>
     </div>
 
-    <div class="price-card">
-      <h3>Pro Plan</h3>
-      <div class="price">prebook / month</div>
-      <p>Advanced dashboard<br>Behavior analytics<br>Auto metrics tracking<br>Monthly reports</p>
-      <a href="#signup" class="btn">Start Pro</a>
+    <div class="card pricing-card highlight">
+      <h3>Pro</h3>
+      <div class="price">prebook / onetime</div>
+      <p>Advanced analytics dashboard<br>Behavior insights<br>Auto metrics<br>Performance reports</p>
+      <a href="#signup" class="btn-primary">Start Pro</a>
     </div>
 
-    <div class="price-card">
-      <h3>Elite (Coming Soon)</h3>
-      <div class="price">prebook / month</div>
-      <p>Institutional analytics<br>Risk models<br>Private masterclass access</p>
-      <a href="#signup" class="btn">Join Waitlist</a>
+    <div class="card pricing-card">
+      <h3>Elite</h3>
+      <div class="price"> / lifetime</div>
+      <p>Institutional analytics<br>Risk model tracking<br>Private sessions</p>
+      <a href="#signup" class="btn-primary">Join Waitlist</a>
     </div>
+
   </div>
 </section>
 
 <section id="signup">
-  <h2>Get Your Free Trading Journal</h2>
-  <p>Enter your email and receive the Decodedge Free Journal template.</p>
+  <h2 class="section-title">Get Your Free Trading Journal</h2>
+  <p class="section-sub">Enter your email and receive the Decodedge Free Journal template instantly.</p>
 
-  <form action="https://formsubmit.co/contact.decodedge@email.com" method="POST">
-    <input type="email" name="email" placeholder="Enter your email" required><br>
-    <button type="submit">Send Me The Journal</button>
+  <form action="https://formsubmit.co/YOUR-EMAIL@gmail.com" method="POST">
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <button type="submit">Send Journal</button>
   </form>
 </section>
 
 <footer>
-  © 2026 Decodedge – Trading Discipline & Analytics Platform
+  © 2026 Decodedge — Trading Discipline & Performance Analytics Platform
 </footer>
 
 </body>
